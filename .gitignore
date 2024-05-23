@@ -2,6 +2,7 @@
 .DS_Store
 apigatewaycl/TestResults/
 apigatewaycl/.vs/
+apigatewaycl/Program.cs
 
 # Archivos de tests
 tests/TestEnv.cs
