@@ -7,9 +7,28 @@ using apigatewaycl.api_client.utils;
 
 namespace tests
 {
+    /// <summary>
+    /// Conjuntos de pruebas de BHE
+    /// </summary>
     [TestClass]
     public class TestBhe
     {
+        /// <summary>
+        /// Pruebas de Bhe que obtendrá documentos de BheEmitidas
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// USUARIO_RUT: RUT del usuario de SII, obtenido de variable de entorno
+        /// USUARIO_CLAVE: Clave del usuario de SII, obtenida de variable de entorno
+        /// TEST_BHE_FECHA: Fecha de prueba, obtenida de variable de entorno
+        /// usuario: Diccionario que contiene RUT y clave
+        /// ListadoBhe: Instancia de BheEmitidas que recibe de parámetros el diccionario usuario
+        /// respuesta: Resultado del método Documentos(rut, fecha) en BheEmitidas
+        /// 
+        /// Assert: respuesta >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestBheEmitidos()
         {

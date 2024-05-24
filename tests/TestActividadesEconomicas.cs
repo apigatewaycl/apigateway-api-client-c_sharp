@@ -7,14 +7,29 @@ using apigatewaycl.api_client.utils;
 
 namespace tests
 {
+    /// <summary>
+    /// Conjuntos de pruebas para ActividadesEconomicas
+    /// </summary>
     [TestClass]
     public class TestActividadesEconomicas
     {
+        /// <summary>
+        /// Pruebas de ActividadesEconomicas que recibirá de parámetro un entero 1
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// Actividades: Instancia de ActividadesEconomicas
+        /// listado: Resultado del método ListadoActividades(1)
+        /// 
+        /// Assert: listado >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestActividadesPrimera()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            TestEnv test_env = new TestEnv();
+            TestEnv_dist test_env = new TestEnv_dist();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
             try
@@ -45,6 +60,18 @@ namespace tests
             }
         }
 
+        /// <summary>
+        /// Pruebas de ActividadesEconomicas que recibirá de parámetro un entero 2
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// Actividades: Instancia de ActividadesEconomicas
+        /// listado: Resultado del método ListadoActividades(2)
+        /// 
+        /// Assert: listado >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestActividadesSegunda()
         {
@@ -80,6 +107,18 @@ namespace tests
             }
         }
 
+        /// <summary>
+        /// Pruebas de ActividadesEconomicas que no recibirá parámetro (default: 0)
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// Actividades: Instancia de ActividadesEconomicas
+        /// listado: Resultado del método ListadoActividades()
+        /// 
+        /// Assert: listado >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestActividadesDefault()
         {
@@ -116,6 +155,18 @@ namespace tests
             }
         }
 
+        /// <summary>
+        /// Pruebas de ActividadesEconomicas que hará un listado default (Primera categoría)
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// Actividades: Instancia de ActividadesEconomicas
+        /// listado: Resultado del método ListadoPrimeraCategoria()
+        /// 
+        /// Assert: listado >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestListadoPrimeraCategoria()
         {
@@ -152,6 +203,18 @@ namespace tests
             }
         }
 
+        /// <summary>
+        /// Pruebas de ActividadesEconomicas que hará un listado default (Segunda categoría)
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// Actividades: Instancia de ActividadesEconomicas
+        /// listado: Resultado del método ListadoSegundaCategoria()
+        /// 
+        /// Assert: listado >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestListadoSegundaCategoria()
         {

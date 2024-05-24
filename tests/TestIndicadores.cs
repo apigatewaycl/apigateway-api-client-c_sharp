@@ -8,10 +8,25 @@ using Newtonsoft.Json;
 
 namespace tests
 {
+    /// <summary>
+    /// Conjunto de pruebas de Indicadores
+    /// </summary>
     [TestClass]
     public class TestIndicadores
     {
-
+        /// <summary>
+        /// Pruebas de Indicadores que obtendrá los valores de la UF según años determinadas
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// anio: Año a evaluar, obtenido de una variable de entorno
+        /// Indicador: Instancia de Uf (Ubicado en Indicadores)
+        /// uf: Resultado del método Anual(anio) en Indicadores
+        /// 
+        /// Assert: uf.ContainsKey(anio) == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestIndicadorAnual()
         {
@@ -22,7 +37,6 @@ namespace tests
             Uf Indicador = new Uf();
 
             // Despliega el valor de la UF este año correctamente
-
             try
             {
                 Dictionary<string, object> uf = Indicador.Anual(Convert.ToInt32(anio));
@@ -46,6 +60,19 @@ namespace tests
             }
         }
 
+        /// <summary>
+        /// Pruebas de Indicadores que obtendrá los valores de la UF según meses determinados
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// periodo: Mes del año a evaluar, obtenido de una variable de entorno
+        /// Indicador: Instancia de Uf (Ubicado en Indicadores)
+        /// uf: Resultado del método Mensual(periodo) en Indicadores
+        /// 
+        /// Assert: uf.ContainsKey(anio) == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestIndicadorMensual()
         {
@@ -78,6 +105,20 @@ namespace tests
             }
         }
 
+        /// <summary>
+        /// Pruebas de Indicadores que obtendrá los valores de la UF en un día específico
+        /// 
+        /// Variables:
+        /// test_env: Instancia para inicialización de Variables de entorno
+        /// fecha: Mes del año a evaluar, obtenido de una variable de entorno
+        /// valor: Valor de la UF en una fecha específica, obtenido de una variable de entorno
+        /// Indicador: Instancia de Uf (Ubicado en Indicadores)
+        /// uf: Resultado del método Diario(fecha) en Indicadores
+        /// 
+        /// Assert: uf.ContainsKey(anio) == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
         [TestMethod]
         public void TestIndicadorDiario()
         {
