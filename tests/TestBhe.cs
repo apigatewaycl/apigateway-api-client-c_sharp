@@ -32,9 +32,10 @@ namespace tests
         [TestMethod]
         public void TestBheEmitidos()
         {
+            Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
-            Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
 
             string USUARIO_RUT = Environment.GetEnvironmentVariable("USUARIO_RUT");
             string USUARIO_CLAVE = Environment.GetEnvironmentVariable("USUARIO_CLAVE");

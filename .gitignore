@@ -3,6 +3,8 @@
 apigatewaycl/TestResults/
 apigatewaycl/.vs/
 apigatewaycl/Program.cs
+apigatewaycl/nuget.exe
 
 # Archivos de tests
 tests/TestEnv.cs
+tests/readme.txt

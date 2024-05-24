@@ -31,6 +31,7 @@ namespace tests
         public void TestIndicadorAnual()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             string anio = Environment.GetEnvironmentVariable("TEST_UF_ANIO");
@@ -77,6 +78,7 @@ namespace tests
         public void TestIndicadorMensual()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             string periodo = Environment.GetEnvironmentVariable("TEST_UF_MES");
@@ -125,6 +127,7 @@ namespace tests
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
             string fecha = Environment.GetEnvironmentVariable("TEST_UF_FECHA");
             string valor = Environment.GetEnvironmentVariable("TEST_UF_VALOR");
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             Uf Indicador = new Uf();

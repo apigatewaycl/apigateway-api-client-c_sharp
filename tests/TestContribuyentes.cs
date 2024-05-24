@@ -30,6 +30,7 @@ namespace tests
         public void TestContribuyenteSituacionTributaria()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             string USUARIO_RUT = Environment.GetEnvironmentVariable("USUARIO_RUT");

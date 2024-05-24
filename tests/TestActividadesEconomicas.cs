@@ -29,7 +29,8 @@ namespace tests
         public void TestActividadesPrimera()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            TestEnv_dist test_env = new TestEnv_dist();
+            // Cambiar a TestEnv_dist
+            TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
             try
@@ -76,6 +77,7 @@ namespace tests
         public void TestActividadesSegunda()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
@@ -123,6 +125,7 @@ namespace tests
         public void TestActividadesDefault()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
@@ -171,6 +174,7 @@ namespace tests
         public void TestListadoPrimeraCategoria()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
@@ -219,6 +223,7 @@ namespace tests
         public void TestListadoSegundaCategoria()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
