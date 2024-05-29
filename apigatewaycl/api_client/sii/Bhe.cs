@@ -168,7 +168,7 @@ namespace apigatewaycl.api_client.sii
             {
                 { "auth", this.GetAuthPass()}
             };
-            string url = $"/sii/bhe/emitidas/documentos/{receptor}/{periodo}";
+            string url = $"/sii/bhe/recibidas/documentos/{receptor}/{periodo}";
 
             if (pagina > 0)
             {
@@ -193,7 +193,7 @@ namespace apigatewaycl.api_client.sii
                 { "auth", this.GetAuthPass()}
             };
 
-            var response = this.client.Post($"/sii/bhe/emitidas/pdf/{codigo}", body);
+            var response = this.client.Post($"/sii/bhe/recibidas/pdf/{codigo}", body);
 
             return response.Content.ReadAsByteArrayAsync().Result;
         }
