@@ -123,14 +123,14 @@ namespace apigatewaycl.api_client.sii
             {
                 { "auth", this.GetAuthPass()}
             };
-            string resource = $"/sii/bte/emitidas/anular/{emisor}/{receptor}";
+            string resource = $"/sii/bte/emitidas/receptor_tasa/{emisor}/{receptor}";
             
             if (periodo != null || !periodo.Equals(string.Empty))
             {
                 resource += $"?periodo={periodo}";
             }
             
-            var response = client.Get($"/sii/bte/emitidas/receptor_tasa/{emisor}/{receptor}");
+            var response = client.Post(resource, body);
             var jsonResponse = response.Content.ReadAsStringAsync().Result;
             
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
