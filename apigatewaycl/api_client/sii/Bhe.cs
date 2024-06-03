@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using apigatewaycl.api_client.utils;
+using System.Diagnostics;
 
 /// <summary>
 /// Módulo para interactuar con Boletas de Honorarios Electrónicas, tanto emitidas como recibidas, del SII.
@@ -57,6 +58,7 @@ namespace apigatewaycl.api_client.sii
             return JsonConvert.DeserializeObject<List<Dictionary<string, object>>>(jsonResponse);
         }
 
+        /*
         /// <summary>
         /// Emite una nueva Boleta de Honorarios Electrónica.
         /// </summary>
@@ -75,6 +77,7 @@ namespace apigatewaycl.api_client.sii
 
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
         }
+        */
 
         /// <summary>
         /// Obtiene el PDF de una BHE emitida.
@@ -89,7 +92,7 @@ namespace apigatewaycl.api_client.sii
             };
 
             var response = this.client.Post($"/sii/bhe/emitidas/pdf/{codigo}", body);
-
+            Trace.WriteLine(response);
             return response.Content.ReadAsByteArrayAsync().Result;
         }
 
@@ -117,6 +120,7 @@ namespace apigatewaycl.api_client.sii
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
         }
 
+        /*
         /// <summary>
         /// Anula una BHE emitida.
         /// </summary>
@@ -126,6 +130,7 @@ namespace apigatewaycl.api_client.sii
         /// <returns type="Dictionary<string, object>">Respuesta JSON con la confirmación de la anulación de la BHE.</returns>
         public Dictionary<string, object> Anular(string emisor, string folio, int causa = ANULACION_CAUSA_ERROR_DIGITACION)
         {
+            // NO SE PUEDE PROBAR
             Dictionary<string, object> body = new Dictionary<string, object>
             {
                 { "auth", this.GetAuthPass()}
@@ -135,7 +140,7 @@ namespace apigatewaycl.api_client.sii
             var jsonResponse = response.Content.ReadAsStringAsync().Result;
 
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
-        }
+        }*/
     }
 
     public class BheRecibidas : ApiBase
@@ -198,6 +203,7 @@ namespace apigatewaycl.api_client.sii
             return response.Content.ReadAsByteArrayAsync().Result;
         }
 
+        /*
         /// <summary>
         /// Marca una observación en una BHE recibida.
         /// </summary>
@@ -217,5 +223,6 @@ namespace apigatewaycl.api_client.sii
 
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
         }
+        */
     }
 }

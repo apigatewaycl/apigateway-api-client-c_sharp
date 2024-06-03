@@ -23,7 +23,11 @@ namespace tests
             string USUARIO_RUT = ""; // RUT DE USUARIO SII
             string USUARIO_CLAVE = ""; // CLAVE DE USUARIO SII
 
+            // Variables de BHE
             string TEST_BHE_FECHA = "202405"; // PERIODO DE BHE A CONSULTAR
+            string TEST_BHE_CODIGO_PDF = ""; // Código de PDF BHE Emitida
+
+            // Variables de Indicador UF
             string TEST_UF_FECHA = "2024-05-17"; // DÍA DE INDICADORES A CONSULTAR
             string TEST_UF_MES = "202405"; // PERIODO DE INDICADORES A CONSULTAR
             string TEST_UF_ANIO = "2024"; // AÑO DE INDICADORES A CONSULTAR
@@ -36,6 +40,8 @@ namespace tests
             Environment.SetEnvironmentVariable("USUARIO_CLAVE", USUARIO_CLAVE);
 
             Environment.SetEnvironmentVariable("TEST_BHE_FECHA", TEST_BHE_FECHA);
+            Environment.SetEnvironmentVariable("TEST_BHE_CODIGO_PDF", TEST_BHE_CODIGO_PDF);
+
             Environment.SetEnvironmentVariable("TEST_UF_FECHA", TEST_UF_FECHA);
             Environment.SetEnvironmentVariable("TEST_UF_MES", TEST_UF_MES);
             Environment.SetEnvironmentVariable("TEST_UF_ANIO", TEST_UF_ANIO);

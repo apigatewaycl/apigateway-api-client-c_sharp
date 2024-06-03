@@ -42,9 +42,9 @@ namespace tests
             {
                 Dictionary<string, object> uf = Indicador.Anual(Convert.ToInt32(anio));
 
-                foreach (var elemento in uf)
+                foreach (var mes in uf)
                 {
-                    Trace.WriteLine(elemento.ToString());
+                    Trace.WriteLine(mes.ToString());
                 }
 
                 Assert.AreEqual(uf.ContainsKey(anio), true);
@@ -88,9 +88,9 @@ namespace tests
             {
                 Dictionary<string, object> uf = Indicador.Mensual(periodo);
 
-                foreach (var elemento in uf)
+                foreach (var dia in uf)
                 {
-                    Trace.WriteLine(elemento.ToString());
+                    Trace.WriteLine(dia.ToString());
                 }
 
                 Assert.AreEqual(uf.ContainsKey(periodo), true);

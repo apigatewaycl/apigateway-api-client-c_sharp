@@ -64,6 +64,7 @@ namespace apigatewaycl.api_client.sii
             return r.Content.ReadAsStringAsync().Result;
         }
 
+        /*
         /// <summary>
         /// Emite una nueva Boleta de Tercero Electrónica.
         /// </summary>
@@ -82,7 +83,9 @@ namespace apigatewaycl.api_client.sii
 
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
         }
+        */
 
+        /*
         /// <summary>
         /// Anula una BTE emitida.
         /// </summary>
@@ -109,6 +112,7 @@ namespace apigatewaycl.api_client.sii
             
             return JsonConvert.DeserializeObject<Dictionary<string, object>>(jsonResponse);
         }
+        */
 
         /// <summary>
         /// Obtiene la tasa de retención aplicada a un receptor por un emisor específico.
