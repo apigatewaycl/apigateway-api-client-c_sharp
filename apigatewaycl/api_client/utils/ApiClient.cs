@@ -1,4 +1,23 @@
-﻿using System;
+﻿/*
+ * API Gateway: Cliente de API en C#.
+ * Copyright (C) API Gateway <https://www.apigateway.cl>
+ *
+ * Este programa es software libre: usted puede redistribuirlo y/o modificarlo
+ * bajo los términos de la GNU Lesser General Public License (LGPL) publicada
+ * por la Fundación para el Software Libre, ya sea la versión 3 de la Licencia,
+ * o (a su elección) cualquier versión posterior de la misma.
+ *
+ * Este programa se distribuye con la esperanza de que sea útil, pero SIN
+ * GARANTÍA ALGUNA; ni siquiera la garantía implícita MERCANTIL o de APTITUD
+ * PARA UN PROPÓSITO DETERMINADO. Consulte los detalles de la GNU Lesser General
+ * Public License (LGPL) para obtener una información más detallada.
+ *
+ * Debería haber recibido una copia de la GNU Lesser General Public License
+ * (LGPL) junto a este programa. En caso contrario, consulte
+ * <http://www.gnu.org/licenses/lgpl.html>.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -83,19 +102,6 @@ namespace apigatewaycl.api_client.utils
             };
         }
 
-        // Pendiente de revisión
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        private StringContent SerializeData(object data)
-        {
-            var jsonData = JsonConvert.SerializeObject(data);
-
-            return new StringContent(jsonData, Encoding.UTF8, "application/json");
-        }
-
         /// <summary>
         /// Verifica la respuesta de la solicitud HTTP y maneja los errores.
         /// </summary>
@@ -130,7 +136,9 @@ namespace apigatewaycl.api_client.utils
 
             if (data != null)
             {
-                request.Content = this.SerializeData(data);
+
+                var jsonData = JsonConvert.SerializeObject(data);
+                request.Content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             }
 
             if (headers != null)

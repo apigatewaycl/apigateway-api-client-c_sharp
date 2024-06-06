@@ -59,7 +59,6 @@
     <Compile Include="api_client\utils\ApiBase.cs" />
     <Compile Include="api_client\utils\ApiClient.cs" />
     <Compile Include="api_client\utils\ApiException.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
