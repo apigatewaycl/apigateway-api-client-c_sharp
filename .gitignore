@@ -2,9 +2,14 @@
 .DS_Store
 apigatewaycl/TestResults/
 apigatewaycl/.vs/
+apigatewaycl/bin/
+apigatewaycl/obj/
 apigatewaycl/Program.cs
 apigatewaycl/nuget.exe
 
 # Archivos de tests
 tests/TestEnv.cs
 tests/readme.txt
+tests/bin/
+tests/obj/
+tests/nuget.exe

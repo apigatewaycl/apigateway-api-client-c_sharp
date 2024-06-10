@@ -58,10 +58,10 @@ delusuario de la API.
     using apigatewaycl.api_client.sii;
 
 
-    string APIGATEWAY_API_TOKEN = "aquí-tu-token-de-usuario"
-    Environment.SetEnvironmentVariable("APIGATEWAY_API_TOKEN";, APIGATEWAY_API_TOKEN);
-    string SII_USUARIO_RUT = ""
-    string SII_USUARIO_CLAVE = ""
+    string APIGATEWAY_API_TOKEN = "aquí-tu-token-de-usuario";
+    Environment.SetEnvironmentVariable("APIGATEWAY_API_TOKEN, APIGATEWAY_API_TOKEN);
+    string SII_USUARIO_RUT = "";
+    string SII_USUARIO_CLAVE = "";
     Dictionary<string, string> usuario = new Dictionary<string, string>()
     {
         { "usuario_rut", SII_USUARIO_RUT },
