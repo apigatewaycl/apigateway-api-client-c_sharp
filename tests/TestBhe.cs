@@ -145,6 +145,10 @@ namespace tests
                 {
                     Trace.WriteLine($"El PDF no existe para el emisor {USUARIO_RUT}.");
                 }
+                else
+                {
+                    System.IO.File.WriteAllBytes($@"test_pdf_{USUARIO_RUT}_{BHE_CODIGO_PDF}.pdf", respuesta);
+                }
 
                 Assert.AreEqual(respuesta.Length >= 0, true);
             }
