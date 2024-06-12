@@ -144,11 +144,11 @@ namespace tests
         public void TestIndicadorDiario()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            TestEnv test_env = new TestEnv();
+            test_env.SetVariablesDeEntorno();
             string fecha = Environment.GetEnvironmentVariable("TEST_UF_FECHA");
             string valor = Environment.GetEnvironmentVariable("TEST_UF_VALOR");
             // Cambiar a TestEnv_dist
-            TestEnv test_env = new TestEnv();
-            test_env.SetVariablesDeEntorno();
             Uf Indicador = new Uf();
 
             try
@@ -156,7 +156,7 @@ namespace tests
                 // Despliega en float el valor de la UF obtenida de TEST_UF_FECHA.
                 float uf = Indicador.Diario(fecha);
                 Trace.WriteLine(uf.ToString());
-                Assert.AreEqual(uf, valor);
+                Assert.AreEqual(uf.ToString(), valor);
             }
             catch (AssertFailedException e)
             {

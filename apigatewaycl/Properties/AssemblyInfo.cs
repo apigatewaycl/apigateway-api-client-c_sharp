@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada a un ensamblado.
-[assembly: AssemblyTitle("apigatewaycl")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("apigatewaycl-C#")]
+[assembly: AssemblyDescription("Cliente para realizar la integración con los servicios web de API Gateway desde C#.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("apigatewaycl")]
+[assembly: AssemblyCompany("API Gateway")]
+[assembly: AssemblyProduct("API Gateway API Client")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
