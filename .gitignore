@@ -4,6 +4,7 @@ apigatewaycl/TestResults/
 apigatewaycl/.vs/
 apigatewaycl/bin/
 apigatewaycl/obj/
+apigatewaycl/packages/
 apigatewaycl/Program.cs
 apigatewaycl/nuget.exe
 

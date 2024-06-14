@@ -11,7 +11,7 @@
     <!-- <icon>icon.png</icon> -->
     <projectUrl>https://www.apigateway.cl</projectUrl>
     <description>Cliente para realizar la integración con los servicios web de API Gateway desde C#.</description>
-    <releaseNotes>Lanzamiento de cliente de API que permite interactuar con el SII usando C#.</releaseNotes>
+    <releaseNotes>Lanzamiento de primera versión del cliente de la API que permite interactuar con el SII usando C#.</releaseNotes>
     <copyright>Copyright (C) API Gateway www.apigateway.cl</copyright>
     <tags>api sii dte facturacion electronica chile</tags>
   </metadata>
