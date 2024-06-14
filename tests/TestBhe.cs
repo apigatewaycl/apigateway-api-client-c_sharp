@@ -106,7 +106,7 @@ namespace tests
         
             string USUARIO_RUT = Environment.GetEnvironmentVariable("USUARIO_RUT");
             string USUARIO_CLAVE = Environment.GetEnvironmentVariable("USUARIO_CLAVE");
-            string BHE_CODIGO_PDF = Environment.GetEnvironmentVariable("TEST_BHE_CODIGO_PDF");
+            string BHE_CODIGO_PDF = Environment.GetEnvironmentVariable("TEST_BHE_CODIGO");
 
             Dictionary<string, string> usuario = new Dictionary<string, string>()
             {
