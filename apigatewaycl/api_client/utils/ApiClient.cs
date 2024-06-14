@@ -19,10 +19,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace apigatewaycl.api_client.utils
@@ -136,11 +134,9 @@ namespace apigatewaycl.api_client.utils
 
             if (data != null)
             {
-
                 var jsonData = JsonConvert.SerializeObject(data);
                 request.Content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             }
-
             if (headers != null)
             {
                 foreach (var header in headers)

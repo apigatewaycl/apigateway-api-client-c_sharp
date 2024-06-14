@@ -41,7 +41,7 @@ namespace tests
         /// Contribuyente: Instancia de Contribuyentes
         /// situacion: Resultado del método SituacionTributaria(rut) en Contribuyentes
         /// 
-        /// Assert: situacion > 0 == true
+        /// Assert: situacion.Count > 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -49,7 +49,6 @@ namespace tests
         public void TestContribuyenteSituacionTributaria()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             string USUARIO_RUT = Environment.GetEnvironmentVariable("USUARIO_RUT");

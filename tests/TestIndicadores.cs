@@ -36,12 +36,6 @@ namespace tests
         /// <summary>
         /// Pruebas de Indicadores que obtendrá los valores de la UF según años determinadas
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// anio: Año a evaluar, obtenido de una variable de entorno
-        /// Indicador: Instancia de Uf (Ubicado en Indicadores)
-        /// uf: Resultado del método Anual(anio) en Indicadores
-        /// 
         /// Assert: uf.ContainsKey(anio) == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
@@ -50,7 +44,6 @@ namespace tests
         public void TestIndicadorAnual()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             string anio = Environment.GetEnvironmentVariable("TEST_UF_ANIO");
@@ -83,13 +76,7 @@ namespace tests
         /// <summary>
         /// Pruebas de Indicadores que obtendrá los valores de la UF según meses determinados
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// periodo: Mes del año a evaluar, obtenido de una variable de entorno
-        /// Indicador: Instancia de Uf (Ubicado en Indicadores)
-        /// uf: Resultado del método Mensual(periodo) en Indicadores
-        /// 
-        /// Assert: uf.ContainsKey(anio) == true
+        /// Assert: uf.ContainsKey(periodo) == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -97,7 +84,6 @@ namespace tests
         public void TestIndicadorMensual()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             string periodo = Environment.GetEnvironmentVariable("TEST_UF_MES");
@@ -129,14 +115,7 @@ namespace tests
         /// <summary>
         /// Pruebas de Indicadores que obtendrá los valores de la UF en un día específico
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// fecha: Mes del año a evaluar, obtenido de una variable de entorno
-        /// valor: Valor de la UF en una fecha específica, obtenido de una variable de entorno
-        /// Indicador: Instancia de Uf (Ubicado en Indicadores)
-        /// uf: Resultado del método Diario(fecha) en Indicadores
-        /// 
-        /// Assert: uf.ContainsKey(anio) == true
+        /// Assert: uf.ToString() == TEST_UF_VALOR
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -148,7 +127,6 @@ namespace tests
             test_env.SetVariablesDeEntorno();
             string fecha = Environment.GetEnvironmentVariable("TEST_UF_FECHA");
             string valor = Environment.GetEnvironmentVariable("TEST_UF_VALOR");
-            // Cambiar a TestEnv_dist
             Uf Indicador = new Uf();
 
             try

@@ -17,11 +17,7 @@
  * <http://www.gnu.org/licenses/lgpl.html>.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace apigatewaycl.api_client.utils
 {

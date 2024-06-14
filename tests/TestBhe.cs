@@ -35,16 +35,7 @@ namespace tests
         /// <summary>
         /// Pruebas de Bhe que obtendrá documentos de BheEmitidas
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// USUARIO_RUT: RUT del usuario de SII, obtenido de variable de entorno
-        /// USUARIO_CLAVE: Clave del usuario de SII, obtenida de variable de entorno
-        /// TEST_BHE_FECHA: Fecha de prueba, obtenida de variable de entorno
-        /// usuario: Diccionario que contiene RUT y clave
-        /// ListadoBhe: Instancia de BheEmitidas que recibe de parámetros el diccionario usuario
-        /// respuesta: Resultado del método Documentos(rut, fecha) en BheEmitidas
-        /// 
-        /// Assert: respuesta >= 0 == true
+        /// Assert: respuesta.Count >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -52,7 +43,6 @@ namespace tests
         public void TestBheEmitidos()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
 
@@ -70,7 +60,7 @@ namespace tests
             {
                 BheEmitidas ListadoBhe = new BheEmitidas(usuario);
                 List<Dictionary<string, object>> respuesta = ListadoBhe.Documentos(USUARIO_RUT, TEST_BHE_FECHA);
-
+                
                 foreach (var ListaBoletas in respuesta)
                 {
                     foreach (var boleta in ListaBoletas)
@@ -100,18 +90,9 @@ namespace tests
 
 
         /// <summary>
-        /// Pruebas de Bhe que obtendrá PDFs de BheEmitidas
+        /// Pruebas de Bhe que recuperará un BHE emitido del usuario usando un código, y se convertirá en bytes para pasar a PDF.
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// USUARIO_RUT: RUT del usuario de SII, obtenido de variable de entorno
-        /// USUARIO_CLAVE: Clave del usuario de SII, obtenida de variable de entorno
-        /// TEST_BHE_CODIGO_PDF: Código del pdf a obtener
-        /// usuario: Diccionario que contiene RUT y clave
-        /// ListadoBhe: Instancia de BheEmitidas que recibe de parámetros el diccionario usuario
-        /// respuesta: Resultado del método Pdf(codigo) en BheEmitidas
-        /// 
-        /// Assert: respuesta >= 0 == true
+        /// Assert: respuesta.Length >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -120,7 +101,6 @@ namespace tests
         {
             // Hay que comparar los resultados con el resultado del código en Python, y arreglar este código en base a eso...
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
         
@@ -139,8 +119,6 @@ namespace tests
                 BheEmitidas ListadoBhe = new BheEmitidas(usuario);
                 byte[] respuesta = ListadoBhe.Pdf(BHE_CODIGO_PDF);
 
-                Trace.WriteLine(ListadoBhe.Pdf(BHE_CODIGO_PDF));
-                
                 if (respuesta.Length == 0)
                 {
                     Trace.WriteLine($"El PDF no existe para el emisor {USUARIO_RUT}.");
@@ -161,6 +139,57 @@ namespace tests
             catch (ApiException e)
             {
                 Trace.WriteLine($"Error de búsqueda. Error: {e}");
+                Assert.Fail();
+            }
+        }
+
+        /// <summary>
+        /// Pruebas de Bhe que enviará un correo con un BHE emitido a un destinatario
+        /// 
+        /// Assert: correo.Count >= 0 == true
+        /// Exception AssertFailedException: Si las condiciones no se cumplen
+        /// Exception ApiException: Si otro error es encontrado
+        /// </summary>
+        [TestMethod]
+        public void TestEmailEmitido()
+        {
+            // Hay que comparar los resultados con el resultado del código en Python, y arreglar este código en base a eso...
+            Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
+            TestEnv test_env = new TestEnv();
+            test_env.SetVariablesDeEntorno();
+
+            string USUARIO_RUT = Environment.GetEnvironmentVariable("USUARIO_RUT");
+            string USUARIO_CLAVE = Environment.GetEnvironmentVariable("USUARIO_CLAVE");
+            string BHE_CODIGO = Environment.GetEnvironmentVariable("TEST_BHE_CODIGO");
+            string BHE_EMAIL = Environment.GetEnvironmentVariable("TEST_BHE_EMAIL");
+
+            Dictionary<string, string> usuario = new Dictionary<string, string>()
+            {
+                { "usuario_rut", USUARIO_RUT },
+                { "usuario_clave", USUARIO_CLAVE }
+            };
+
+            try
+            {
+                BheEmitidas ListadoBhe = new BheEmitidas(usuario);
+                Dictionary<string, object> correo = ListadoBhe.Email(BHE_CODIGO, BHE_EMAIL);
+
+                if (correo.Count == 0)
+                {
+                    Trace.WriteLine($"El BHE no existe para {USUARIO_RUT}.");
+                }
+
+                Assert.AreEqual(correo.Count >= 0, true);
+            }
+            catch (AssertFailedException e)
+            {
+                // Si arroja un mensaje de error, es porque no estás conectado
+                Trace.WriteLine($"No se ha podido enviar el correo. Error: {e}");
+                Assert.Fail();
+            }
+            catch (ApiException e)
+            {
+                Trace.WriteLine($"Error: {e}");
                 Assert.Fail();
             }
         }

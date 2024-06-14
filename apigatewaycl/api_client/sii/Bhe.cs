@@ -17,14 +17,9 @@
  * <http://www.gnu.org/licenses/lgpl.html>.
  */
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using apigatewaycl.api_client.utils;
-using System.Diagnostics;
 
 /// <summary>
 /// Módulo para interactuar con Boletas de Honorarios Electrónicas, tanto emitidas como recibidas, del SII.
@@ -111,7 +106,6 @@ namespace apigatewaycl.api_client.sii
             };
 
             var response = this.client.Post($"/sii/bhe/emitidas/pdf/{codigo}", body);
-            Trace.WriteLine(response);
             return response.Content.ReadAsByteArrayAsync().Result;
         }
 

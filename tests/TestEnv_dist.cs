@@ -18,10 +18,6 @@
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace tests
 {
@@ -44,7 +40,8 @@ namespace tests
 
             // Variables de BHE
             string TEST_BHE_FECHA = "202405"; // PERIODO DE BHE A CONSULTAR
-            string TEST_BHE_CODIGO_PDF = ""; // Código de PDF BHE Emitida
+            string TEST_BHE_CODIGO = ""; // Código de PDF BHE Emitida
+            string TEST_BHE_EMAIL = "";
 
             // Variables de Indicador UF
             string TEST_UF_FECHA = "2024-05-17"; // DÍA DE INDICADORES A CONSULTAR
@@ -59,7 +56,8 @@ namespace tests
             Environment.SetEnvironmentVariable("USUARIO_CLAVE", USUARIO_CLAVE);
 
             Environment.SetEnvironmentVariable("TEST_BHE_FECHA", TEST_BHE_FECHA);
-            Environment.SetEnvironmentVariable("TEST_BHE_CODIGO_PDF", TEST_BHE_CODIGO_PDF);
+            Environment.SetEnvironmentVariable("TEST_BHE_CODIGO", TEST_BHE_CODIGO);
+            Environment.SetEnvironmentVariable("TEST_BHE_EMAIL", TEST_BHE_EMAIL);
 
             Environment.SetEnvironmentVariable("TEST_UF_FECHA", TEST_UF_FECHA);
             Environment.SetEnvironmentVariable("TEST_UF_MES", TEST_UF_MES);

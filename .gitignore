@@ -13,4 +13,5 @@ tests/TestEnv.cs
 tests/readme.txt
 tests/bin/
 tests/obj/
+tests/Connected Services/
 tests/nuget.exe

@@ -33,14 +33,9 @@ namespace tests
     public class TestActividadesEconomicas
     {
         /// <summary>
-        /// Pruebas de ActividadesEconomicas que recibirá de parámetro un entero 1
+        /// Pruebas de ActividadesEconomicas que recibirá de parámetro un entero 1. Deberá haber un Listado de Actividades de Categoría 1.
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// Actividades: Instancia de ActividadesEconomicas
-        /// listado: Resultado del método ListadoActividades(1)
-        /// 
-        /// Assert: listado >= 0 == true
+        /// Assert: listado.Count >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -80,14 +75,9 @@ namespace tests
         }
 
         /// <summary>
-        /// Pruebas de ActividadesEconomicas que recibirá de parámetro un entero 2
+        /// Pruebas de ActividadesEconomicas que recibirá de parámetro un entero 2. Deberá haber un Listado de Actividades de Categoría 2.
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// Actividades: Instancia de ActividadesEconomicas
-        /// listado: Resultado del método ListadoActividades(2)
-        /// 
-        /// Assert: listado >= 0 == true
+        /// Assert: listado.Count >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -95,7 +85,6 @@ namespace tests
         public void TestActividadesSegunda()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
@@ -128,14 +117,9 @@ namespace tests
         }
 
         /// <summary>
-        /// Pruebas de ActividadesEconomicas que no recibirá parámetro (default: 0)
+        /// Pruebas de ActividadesEconomicas que no recibirá parámetro (default: 0). Deberá haber un Listado de Actividades por default.
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// Actividades: Instancia de ActividadesEconomicas
-        /// listado: Resultado del método ListadoActividades()
-        /// 
-        /// Assert: listado >= 0 == true
+        /// Assert: listado.Count >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -143,7 +127,6 @@ namespace tests
         public void TestActividadesDefault()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
@@ -177,14 +160,9 @@ namespace tests
         }
 
         /// <summary>
-        /// Pruebas de ActividadesEconomicas que hará un listado default (Primera categoría)
+        /// Pruebas de ActividadesEconomicas que hará un listado default (Primera categoría). Deberá haber un Listado de Actividades de categoría 1.
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// Actividades: Instancia de ActividadesEconomicas
-        /// listado: Resultado del método ListadoPrimeraCategoria()
-        /// 
-        /// Assert: listado >= 0 == true
+        /// Assert: listado.Count >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -192,7 +170,6 @@ namespace tests
         public void TestListadoPrimeraCategoria()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
@@ -226,14 +203,9 @@ namespace tests
         }
 
         /// <summary>
-        /// Pruebas de ActividadesEconomicas que hará un listado default (Segunda categoría)
+        /// Pruebas de ActividadesEconomicas que hará un listado default (Segunda categoría). Deberá haber un Listado de Actividades de categoría 2.
         /// 
-        /// Variables:
-        /// test_env: Instancia para inicialización de Variables de entorno
-        /// Actividades: Instancia de ActividadesEconomicas
-        /// listado: Resultado del método ListadoSegundaCategoria()
-        /// 
-        /// Assert: listado >= 0 == true
+        /// Assert: listado.Count >= 0 == true
         /// Exception AssertFailedException: Si las condiciones no se cumplen
         /// Exception ApiException: Si otro error es encontrado
         /// </summary>
@@ -241,7 +213,6 @@ namespace tests
         public void TestListadoSegundaCategoria()
         {
             Trace.Listeners.Add(new TextWriterTraceListener(Console.Out));
-            // Cambiar a TestEnv_dist
             TestEnv test_env = new TestEnv();
             test_env.SetVariablesDeEntorno();
             ActividadesEconomicas Actividades = new ActividadesEconomicas();
