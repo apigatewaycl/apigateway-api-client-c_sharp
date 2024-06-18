@@ -121,7 +121,7 @@ namespace tests
 
                 if (respuesta.Length == 0)
                 {
-                    Trace.WriteLine($"El PDF no existe para el emisor {USUARIO_RUT}.");
+                    Trace.WriteLine($"El BHE no existe para el emisor {USUARIO_RUT}.");
                 }
                 else
                 {
@@ -133,7 +133,7 @@ namespace tests
             catch (AssertFailedException e)
             {
                 // Si arroja un mensaje de error, es porque no estás conectado
-                Trace.WriteLine($"No se ha podido encontrar el PDF. Error: {e}");
+                Trace.WriteLine($"No se ha podido encontrar el BHE. Error: {e}");
                 Assert.Fail();
             }
             catch (ApiException e)
