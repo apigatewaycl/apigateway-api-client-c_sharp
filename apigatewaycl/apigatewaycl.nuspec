@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>apigatewaycl</id>
+    <id>apigatewayclcsharp</id>
     <version>1.0.0</version>
-    <title>Api Gateway CL CSharp</title>
+    <title>API Gateway CL CSharp</title>
     <authors>API Gateway</authors>
     <owners>API Gateway</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
