@@ -3,11 +3,11 @@ API Gateway: Cliente de API en C#
 
 Enlaces sujetos a cambios.
 
-.. image:: https://img.shields.io/nuget/v/apigatewaycl.svg
-    :target: https://www.nuget.org/packages/apigatewaycl/
+.. image:: https://img.shields.io/nuget/v/apigatewayclcsharp.svg
+    :target: https://www.nuget.org/packages/apigatewayclcsharp/
     :alt: NuGet version
-.. image:: https://img.shields.io/nuget/dt/apigatewaycl.svg
-    :target: https://www.nuget.org/packages/apigatewaycl/
+.. image:: https://img.shields.io/nuget/dt/apigatewayclcsharp.svg
+    :target: https://www.nuget.org/packages/apigatewayclcsharp/
     :alt: NuGet downloads
 
 Cliente para realizar la integración con los servicios web de `API Gateway <https://www.apigateway.cl>`_ desde C#.
@@ -22,7 +22,7 @@ Instalación mediante el Administrador de Paquetes NuGet
 2.  Haz clic derecho en el proyecto en el Explorador de Soluciones y 
     selecciona "Administrar paquetes NuGet...".
 
-3.  En la pestaña "Examinar", busca `apigatewaycl`.
+3.  En la pestaña "Examinar", busca `apigatewaycl`. Debe ser la versión C# (Csharp)
 
 4.  Selecciona el paquete `apigatewaycl` y haz clic en "Instalar".
 
@@ -35,7 +35,7 @@ Instalación desde la línea de comandos (cmd)
 2.  Ejecuta el siguiente comando para instalar `apigatewaycl`:
 
 .. code:: shell
-   nuget install apigatewaycl
+   nuget install apigatewayclcsharp
 
 Cliente genérico vs clientes específicos
 ----------------------------------------
@@ -82,7 +82,7 @@ deberá indicar el token del usuario. Ejemplo con el cliente genérico:
 
 El siguiente es un ejemplo con el cliente específico para BHE. Primero se pasan
 los datos obligatorios de RUT y clave del usuario. Luego además se pasa el token
-delusuario de la API.
+del usuario de la API.
 
 .. code:: C
 
