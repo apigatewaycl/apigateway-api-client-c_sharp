@@ -7,6 +7,7 @@ apigatewaycl/obj/
 apigatewaycl/packages/
 apigatewaycl/Program.cs
 apigatewaycl/nuget.exe
+apigatewaycl/apigatewayclcsharp.1.0.0.nupkg
 
 # Archivos de tests
 tests/TestEnv.cs
