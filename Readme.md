@@ -96,3 +96,5 @@ Enlaces
 
 - [Sitio web API Gateway](https://www.apigateway.cl).
 - [Código fuente en GitHub](https://github.com/apigatewaycl/apigateway-api-client-c_sharp).
+- [Paquete en NuGet](https://www.nuget.org/packages/apigatewayclcsharp).
+- [Documentación en Read the Docs](https://apigatewaycl.readthedocs.io/es/latest).

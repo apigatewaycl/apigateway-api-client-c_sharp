@@ -72,19 +72,19 @@ reconocida automáticamente por el cliente:
 Si no se desea usar una variable de entorno, al instanciar los objetos se
 deberá indicar el token del usuario. Ejemplo con el cliente genérico:
 
-.. code:: C
+.. code:: C#
 
     using apigatewaycl;
 
     string APIGATEWAY_API_TOKEN = "aquí-tu-token-de-usuario";
     Environment.SetEnvironmentVariable("APIGATEWAY_API_TOKEN", APIGATEWAY_API_TOKEN);
-    client = apigatewaycl.api_client.utils.ApiClient(APIGATEWAY_API_TOKEN);
+    var client = apigatewaycl.api_client.utils.ApiClient(APIGATEWAY_API_TOKEN);
 
 El siguiente es un ejemplo con el cliente específico para BHE. Primero se pasan
 los datos obligatorios de RUT y clave del usuario. Luego además se pasa el token
 del usuario de la API.
 
-.. code:: C
+.. code:: C#
 
     using System.Collections.Generic;
     using apigatewaycl.api_client.sii;
@@ -125,3 +125,5 @@ Enlaces
 
 - `Sitio web API Gateway <https://www.apigateway.cl>`_.
 - `Código fuente en GitHub <https://github.com/apigatewaycl/apigateway-api-client-c_sharp>`_.
+- `Paquete en NuGet <https://www.nuget.org/packages/apigatewayclcsharp>`_.
+- `Documentación en Read the Docs <https://apigatewaycl.readthedocs.io/es/latest>`_.
