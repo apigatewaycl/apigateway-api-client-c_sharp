@@ -2,8 +2,8 @@
 
 Enlaces sujetos a cambios.
 
-[![NuGet version](https://img.shields.io/nuget/v/apigatewayclcsharp.svg)](https://www.nuget.org/packages/apigatewayclcsharp/)
-[![NuGet downloads](https://img.shields.io/nuget/dt/apigatewayclcsharp.svg)](https://www.nuget.org/packages/apigatewayclcsharp/)
+[![NuGet version](https://img.shields.io/nuget/v/apigatewaycl.csharp.svg)](https://www.nuget.org/packages/apigatewaycl.csharp/)
+[![NuGet downloads](https://img.shields.io/nuget/dt/apigatewaycl.csharp.svg)](https://www.nuget.org/packages/apigatewaycl.csharp/)
 
 Cliente para realizar la integración con los servicios web de [API Gateway](https://www.apigateway.cl) desde C#.
 
@@ -96,5 +96,5 @@ Enlaces
 
 - [Sitio web API Gateway](https://www.apigateway.cl).
 - [Código fuente en GitHub](https://github.com/apigatewaycl/apigateway-api-client-c_sharp).
-- [Paquete en NuGet](https://www.nuget.org/packages/apigatewayclcsharp).
+- [Paquete en NuGet](https://www.nuget.org/packages/apigatewaycl.csharp).
 - [Documentación en Read the Docs](https://apigatewaycl.readthedocs.io/es/latest).

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>apigatewayclcsharp</id>
+    <id>apigatewaycl.csharp</id>
     <version>1.0.0</version>
-    <title>API Gateway CL CSharp</title>
+    <title>API Gateway CL for C#</title>
     <authors>API Gateway</authors>
     <owners>API Gateway</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -13,6 +13,6 @@
     <description>Cliente para realizar la integración con los servicios web de API Gateway desde C#.</description>
     <releaseNotes>Lanzamiento de primera versión del cliente de la API que permite interactuar con el SII usando C#.</releaseNotes>
     <copyright>Copyright (C) API Gateway www.apigateway.cl</copyright>
-    <tags>api sii dte facturacion electronica chile</tags>
+    <tags>api sii dte facturacion electronica chile csharp</tags>
   </metadata>
 </package>
